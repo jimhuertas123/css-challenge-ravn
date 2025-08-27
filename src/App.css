@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+:root {
+  --background-app: #fff;
+  --main-background-color: #F5F6FC;
+  --text-color: #343951;
+  --p-text-color: #858A9D;
+}
+
+[data-theme='dark'] {
+  --background-app: #F5F6FC;
+  --main-background-color: #464d6e;
+  --text-color: #fff;
+  --p-text-color: #e0e1e5;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  background-color: var(--background-app);
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Roboto';
+  font-size: 1.6rem;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+main {
+  padding: 2rem;
+  min-height: 100vh;
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 56.25%;
+  }
+
+  main {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 50%;
+  }
+
+  main {
+    padding: 0.8rem;
+  }
+}
+
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ******************************************** */
+/*      CSSChallenge structure styling          */
+/* ******************************************** */
+.app-container {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  min-height: 100vh;
+
+  /* transition purpose*/
+  transition: gap 300ms ease-in-out;
+}
+
+.app-left-sidebar-container {
+  width: 172px;
+  flex-shrink: 0;
+  background-color: #343951;
+  color: #FFFFFF;
+  /* transition purpose*/
+  transition: width 300ms cubic-bezier(0.95, 0.05, 0.795, 0.035);
+}
+
+.app-right-sidebar-container {
+  width: 252px;
+  flex-shrink: 0;
+  background-color: var(--main-background-color);
+  color: var(--text-color);
+
+  /* transition purpose*/
+  transition: width 300ms cubic-bezier(0.95, 0.05, 0.795, 0.035),
+    background-color 300ms ease-in-out;
+}
+
+.app-main-container {
+  flex: 1 1 0;
+  min-width: 0;
+  background-color: var(--main-background-color);
+  color: var(--text-color);
+
+  /* transition purpose*/
+  transition: background-color 300ms ease-in-out;
+}
+
+@media (max-width: 1128px) {
+  .app-container {
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .app-left-sidebar-container,
+  .app-right-sidebar-container {
+    width: 100px;
+    min-height: 60px;
+  }
+}
