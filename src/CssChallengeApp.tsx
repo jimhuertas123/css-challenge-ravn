@@ -9,6 +9,7 @@ import RightSidebar from './components/RightSidebar/RightSidebar';
 
 export const CssChallengeApp = () => {
   const [dataTheme, setDataTheme] = useState('light');
+  const [rightSidebarOpen, setRightSidebarOpen] = useState(false);
 
 
 
@@ -23,10 +24,18 @@ export const CssChallengeApp = () => {
         <Sidebar />
       </div>
       <main className="app-main-container">
-        <h1>This is the main content</h1>
+        <button
+          className="drawer-toggle"
+          onClick={() => setRightSidebarOpen(!rightSidebarOpen)}
+          style={{ opacity: !rightSidebarOpen ? 1 : 0, pointerEvents: !rightSidebarOpen ? 'auto' : 'none' }}
+          aria-label="Open sidebar"
+        >
+          ☰
+        </button>
         <MainContent />
       </main>
-      <div className='app-right-sidebar-container'>
+      <div className={`app-right-sidebar-container ${rightSidebarOpen ? 'is-open' : ''}`}>
+        <label onClick={() => setRightSidebarOpen(false)} htmlFor="drawer-toggle" className="drawer-close-label">✕</label>
         <RightSidebar />
       </div>
     </div>

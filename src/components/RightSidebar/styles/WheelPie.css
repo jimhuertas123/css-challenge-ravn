@@ -1,0 +1,15 @@
+.donut-chart {
+    width: 100%;
+    height: 65%;
+    padding: 2% 0;
+}
+
+.circle-content {
+    display: flex;
+    padding: 20px;
+}
+
+.donut-chart-svg {
+    width: 100%;
+    height: 100%;
+}

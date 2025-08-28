@@ -7,15 +7,18 @@
   --p-text-color: #858A9D;
   --sidebar-text-color: #FFFFFF;
   --sidebar-desactive-text-color: #858A9D;
+  --suscription-bg-color: #FFFFFF;
 }
 
+/* #464d6e */
 [data-theme='dark'] {
   --background-app: #F5F6FC;
-  --main-background-color: #464d6e;
+  --main-background-color: #343951;
   --text-color: #fff;
   --p-text-color: #e0e1e5;
   --sidebar-text-color: #FFFFFF;
   --sidebar-desactive-text-color: #858A9D;
+  --suscription-bg-color: #464d6e;
 }
 
 * {
@@ -77,6 +80,7 @@ img {
   width: 100%;
   height: 100vh;
   overflow: hidden;
+  min-height: 520px;
 
   /* transition purpose*/
   transition: gap 300ms ease-in-out;
@@ -99,7 +103,45 @@ img {
 
   /* transition purpose*/
   transition: width 300ms cubic-bezier(0.95, 0.05, 0.795, 0.035),
-    background-color 300ms ease-in-out;
+    background-color 300ms ease-in-out,
+    transform 300ms ease-in-out;
+}
+
+.drawer-close-label {
+  position: absolute;
+  margin-top: 8px;
+  right: 315px;
+  display: none;
+  font-size: 15px;
+  width: 30px;
+  justify-content: center;
+  align-items: center;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  background-color: rgba(52, 57, 81, 0.2);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition: scale 300ms ease-in-out;
+}
+
+.drawer-close-label:hover {
+  scale: 1.05
+}
+
+.drawer-toggle {
+  display: none;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  opacity: 0;
+  background-color: rgba(52, 57, 81, 0.2);
+  border: 1px solid var(--border-color);
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  z-index: 1002;
+  font-size: 18px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  color: var(--text-color);
 }
 
 .app-main-container {
@@ -112,25 +154,79 @@ img {
   transition: background-color 300ms ease-in-out;
 }
 
-
-
 @media (max-width: 1128px) {
+  .drawer-toggle {
+    opacity: 1;
+
+    transition: opacity 300ms ease-in-out;
+  }
+
   .app-container {
     flex-direction: row;
     gap: 10px;
   }
 
-  .app-left-sidebar-container,
-  .app-right-sidebar-container {
+  .app-left-sidebar-container {
     width: 60px;
     min-height: 60px;
   }
+
+  .drawer-close-label {
+    display: flex;
+    transition: display 0ms 300ms;
+  }
 }
 
-@media (max-height: 490px) {
+@media (max-height: 520px) {
   .app-container {
     gap: 10px;
     height: auto;
     overflow-y: scroll;
+  }
+}
+
+/* .drawer-checkbox {
+  display: none;
+}
+
+@media (max-width: 1128px) {
+  .drawer-checkbox:checked+.drawer-toggle-label+* .app-right-sidebar-container {
+    transform: translateX(0);
+  }
+}
+ */
+
+/* Drawer toggle button - hidden on desktop */
+
+@media (max-width: 1128px) {
+  .app-container {
+    position: relative;
+  }
+
+  .app-right-sidebar-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 352px;
+    z-index: 1000;
+
+    transform: translateX(100%);
+    transition: transform 300ms ease-in-out;
+  }
+
+  .app-right-sidebar-container.is-open {
+    transform: translateX(0);
+
+    transition: transform 300ms ease-in-out;
+  }
+
+  .drawer-toggle,
+  .drawer-close {
+    display: block;
+  }
+
+  .drawer-backdrop {
+    display: block;
   }
 }
