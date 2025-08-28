@@ -5,6 +5,8 @@
   --main-background-color: #F5F6FC;
   --text-color: #343951;
   --p-text-color: #858A9D;
+  --sidebar-text-color: #FFFFFF;
+  --sidebar-desactive-text-color: #858A9D;
 }
 
 [data-theme='dark'] {
@@ -12,6 +14,8 @@
   --main-background-color: #464d6e;
   --text-color: #fff;
   --p-text-color: #e0e1e5;
+  --sidebar-text-color: #FFFFFF;
+  --sidebar-desactive-text-color: #858A9D;
 }
 
 * {
@@ -71,14 +75,15 @@ img {
   display: flex;
   gap: 20px;
   width: 100%;
-  min-height: 100vh;
+  height: 100vh;
+  overflow: hidden;
 
   /* transition purpose*/
   transition: gap 300ms ease-in-out;
 }
 
 .app-left-sidebar-container {
-  width: 172px;
+  width: 272px;
   flex-shrink: 0;
   background-color: #343951;
   color: #FFFFFF;
@@ -87,7 +92,7 @@ img {
 }
 
 .app-right-sidebar-container {
-  width: 252px;
+  width: 352px;
   flex-shrink: 0;
   background-color: var(--main-background-color);
   color: var(--text-color);
@@ -107,6 +112,8 @@ img {
   transition: background-color 300ms ease-in-out;
 }
 
+
+
 @media (max-width: 1128px) {
   .app-container {
     flex-direction: row;
@@ -115,7 +122,15 @@ img {
 
   .app-left-sidebar-container,
   .app-right-sidebar-container {
-    width: 100px;
+    width: 60px;
     min-height: 60px;
+  }
+}
+
+@media (max-height: 490px) {
+  .app-container {
+    gap: 10px;
+    height: auto;
+    overflow-y: scroll;
   }
 }

@@ -1,3 +1,10 @@
+.switch-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0 5px 0;
+}
+
 .switch-root {
     width: 42px;
     height: 25px;

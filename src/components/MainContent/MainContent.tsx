@@ -1,3 +1,5 @@
+import './MainContent.module.css';
+
 interface MainContentProps {
 
 }
@@ -5,8 +7,6 @@ interface MainContentProps {
 const MainContent: React.FC<MainContentProps> = () => {
     return (
         <div className="main-content-container">
-
-            <div className="logo"></div>
         </div>
     );
 }
