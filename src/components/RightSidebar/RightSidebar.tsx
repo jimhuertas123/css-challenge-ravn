@@ -1,5 +1,5 @@
 import './RightSidebar.css';
-import Avatar from '../../assets/avatar.jpeg';
+import Avatar from '../../assets/avatar.png';
 import { AvatarIcon, GearIcon } from '@radix-ui/react-icons'
 import { DonutChart } from './WheelPie';
 import { CardsStorage } from './CardsStorage';

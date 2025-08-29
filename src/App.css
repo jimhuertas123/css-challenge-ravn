@@ -8,6 +8,8 @@
   --sidebar-text-color: #FFFFFF;
   --sidebar-desactive-text-color: #858A9D;
   --suscription-bg-color: #FFFFFF;
+  --placeholder-text-color: #BCBECA;
+  --input-focus-bg-color: rgba(59, 130, 246, 0.3);
 }
 
 /* #464d6e */
@@ -19,6 +21,8 @@
   --sidebar-text-color: #FFFFFF;
   --sidebar-desactive-text-color: #858A9D;
   --suscription-bg-color: #464d6e;
+  --placeholder-text-color: #BCBECA;
+  --input-focus-bg-color: rgba(255, 255, 255, 0.3);
 }
 
 * {
@@ -145,7 +149,7 @@ img {
 }
 
 .app-main-container {
-  flex: 1 1 0;
+  width: 100%;
   min-width: 0;
   background-color: var(--main-background-color);
   color: var(--text-color);

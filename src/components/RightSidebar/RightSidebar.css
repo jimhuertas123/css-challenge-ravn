@@ -14,8 +14,6 @@
 
 }
 
-.right-sidebar-stats {}
-
 .right-sidebar-activity {
     margin-top: 5%;
 }
@@ -24,8 +22,11 @@
     display: flex;
 }
 
-.profile-icons {
-    width: 100%;
+.profile-avatar {
+    background: #C4C4C4;
+    color: transparent;
+    font-size: 0;
+    text-indent: -9999px;
 }
 
 .profile-info {
