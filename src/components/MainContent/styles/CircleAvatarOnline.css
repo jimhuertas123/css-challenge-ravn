@@ -3,12 +3,14 @@
     align-items: center;
     height: 100%;
     width: 100%;
-    margin-left: 10%;
 }
 
 .shared-profiles>* {
-    height: 30%;
+    display: flex;
+    width: 40%;
     aspect-ratio: 1/1;
+    max-width: 30px;
+    max-height: 30px;
     border-radius: 50%;
     border: 1px solid#BEC0C8;
     background-color: #FFFFFF;
@@ -42,7 +44,8 @@
     }
 
     .shared-profiles>* {
-        height: 18%;
+        width: 40%;
+        aspect-ratio: 1/1;
     }
 
     .cards-shared-files-content h3 {

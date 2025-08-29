@@ -175,6 +175,14 @@
     }
 }
 
+@media (max-width: 628px) {
+    .main-content-body-wrapper {
+        display: grid;
+        grid-template-rows: calc(35% - 39px) 30% 20%;
+    }
+}
+
+
 /* FINAL SECTION */
 .cards-shared-files {
     height: 80%;

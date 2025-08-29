@@ -30,16 +30,16 @@
 .shared-info-container {
   height: 60%;
   display: grid;
-  grid-template-columns: 30% 70%;
+  grid-template-columns: 50% 50%;
   align-items: center;
 }
 
 .icon-container {
-  aspect-ratio: 1/0.9;
   background-color: #FF9F00;
   box-shadow: -6px 6px 0px #FFD999;
-  width: 40px;
-  height: 35px;
+  width: 50%;
+  max-width: 40px;
+  aspect-ratio: 1/0.9;
   margin-left: 20%;
 }
 

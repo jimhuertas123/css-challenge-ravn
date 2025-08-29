@@ -93,7 +93,7 @@ const MainContent = ({ }: MainContentProps) => {
 				</div>
 				<div className='content-shared-files-wrapper'>
 					<div className='content-title'>
-						<h3>Shared Files</h3>
+						<h3>Shared whith me</h3>
 						<span>View all</span>
 					</div>
 					<div className='cards-shared-files'>

@@ -47,19 +47,19 @@ export const LeftSidebar = () => {
               <li>
                 <a href="/upload-items">
                   <span><FilePlusIcon /></span>
-                  <span>Upload Items</span>
+                  <span>Upload files</span>
                 </a>
               </li>
               <li>
                 <a href="/upload-folders">
                   <span><CardStackPlusIcon /></span>
-                  <span>Upload Folders</span>
+                  <span>Upload folders</span>
                 </a>
               </li>
               <li>
                 <a href="/new-folder">
                   <span><UploadIcon /></span>
-                  <span>New Folder</span>
+                  <span>New folder</span>
                 </a>
               </li>
               <li>

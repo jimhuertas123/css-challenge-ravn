@@ -32,7 +32,7 @@
 }
 
 .shared-profiles-files>* {
-    height: 40%;
+    height: 30%;
     aspect-ratio: 1/1;
     border-radius: 50%;
     border: 1.2px solid#BEC0C8;
@@ -55,7 +55,7 @@
 
 @media (max-width: 628px) {
     .shared-profiles-files>* {
-        height: 30%;
+        height: 25%;
     }
 
     .cards-shared-files-content h3 {

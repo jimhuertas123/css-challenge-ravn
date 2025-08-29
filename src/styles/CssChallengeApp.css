@@ -91,11 +91,11 @@ img {
 }
 
 .app-left-sidebar-container {
-  width: 232px;
+  width: 172px;
   flex-shrink: 0;
   background-color: #343951;
   color: #FFFFFF;
-  /* transition purpose*/
+
   transition: width 300ms cubic-bezier(0.95, 0.05, 0.795, 0.035);
 }
 
@@ -107,7 +107,6 @@ img {
 
   animation: slideIn 300ms ease-in-out;
 
-  /* transition purpose*/
   transition: width 300ms cubic-bezier(0.95, 0.05, 0.795, 0.035),
     background-color 300ms ease-in-out,
     transform 300ms ease-in-out;
@@ -134,11 +133,10 @@ img {
 }
 
 .drawer-toggle {
-  display: none;
   position: fixed;
   top: 20px;
   right: 20px;
-  opacity: 0;
+  opacity: 1;
   background-color: rgba(52, 57, 81, 0.2);
   border: 1px solid var(--border-color);
   padding: 12px;
@@ -148,6 +146,14 @@ img {
   font-size: 18px;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
   color: var(--text-color);
+
+  transition: opacity 200ms ease-in-out;
+
+}
+
+.drawer-toggle.is-open {
+  opacity: 0;
+  pointer-events: none;
 }
 
 .app-main-container {
@@ -166,20 +172,9 @@ img {
     animation: slideIn 300ms ease-in-out;
   }
 
-  .drawer-toggle {
-    opacity: 1;
-
-    transition: opacity 300ms ease-in-out;
-  }
-
   .app-container {
     flex-direction: row;
     gap: 10px;
-  }
-
-  .app-left-sidebar-container {
-    width: 60px;
-    min-height: 60px;
   }
 
   .drawer-close-label {
@@ -188,58 +183,26 @@ img {
   }
 }
 
-@media (max-height: 520px) {
+@media (max-width: 728px) {
+  .app-left-sidebar-container {
+    width: 55px;
+    min-height: 60px;
+  }
 
-  .app-right-sidebar-container,
+  .app-container {
+    padding-right: 10px;
+    gap: 4px;
+  }
+}
+
+
+@media (max-height: 520px) {
+  .app-main-container {
+    overflow: hidden;
+  }
+
   .app-container {
     gap: 10px;
     height: auto;
-    overflow-y: scroll;
-  }
-}
-
-/* .drawer-checkbox {
-  display: none;
-}
-
-@media (max-width: 1128px) {
-  .drawer-checkbox:checked+.drawer-toggle-label+* .app-right-sidebar-container {
-    transform: translateX(0);
-  }
-}
- */
-
-/* Drawer toggle button - hidden on desktop */
-
-@media (max-width: 1024px) {
-  .app-container {
-    position: relative;
-  }
-
-  .app-right-sidebar-container {
-    position: fixed;
-    top: 0;
-    right: 0;
-    height: 100vh;
-    width: 352px;
-    z-index: 1000;
-
-    transform: translateX(100%);
-    transition: transform 300ms ease-in-out;
-  }
-
-  .app-right-sidebar-container.is-open {
-    transform: translateX(0);
-
-    transition: transform 300ms ease-in-out;
-  }
-
-  .drawer-toggle,
-  .drawer-close {
-    display: block;
-  }
-
-  .drawer-backdrop {
-    display: block;
   }
 }
