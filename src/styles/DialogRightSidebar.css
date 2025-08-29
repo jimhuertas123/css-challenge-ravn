@@ -1,0 +1,64 @@
+.drawer-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    animation: fadeIn 300ms;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.app-right-sidebar-container-dialog {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 352px;
+    height: 100vh;
+    background-color: var(--main-background-color) !important;
+    color: var(--text-color);
+    z-index: 1000;
+    overflow-y: auto;
+    box-shadow: -2px 0 16px rgba(0, 0, 0, 0.08);
+    animation: slideIn 300ms;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+.drawer-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: var(--text-color);
+    z-index: 1;
+}
+
+@media (max-height: 520px) {
+    .app-right-sidebar-container-dialog {
+        gap: 10px;
+        max-height: 100vh;
+        height: auto;
+        overflow-y: scroll !important;
+    }
+}

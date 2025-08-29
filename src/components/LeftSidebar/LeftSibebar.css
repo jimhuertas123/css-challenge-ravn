@@ -111,7 +111,7 @@
   transition: background-color 200ms, height 200ms;
 }
 
-@media (max-width: 1128px) {
+@media (max-width: 1024px) {
 
   /* text under a */
   .sidebar-nav a> :not(:first-child) {
@@ -203,7 +203,7 @@
   width: 100%;
 }
 
-@media (max-width: 1128px) {
+@media (max-width: 1024px) {
   .create-button-container button {
     width: 40px;
     justify-content: center;
@@ -274,7 +274,7 @@
   background-color: rgba(96, 104, 132, 0.6);
 }
 
-@media (max-width: 1128px) {
+@media (max-width: 1024px) {
   .popover-arrow {
     left: -20px;
   }
