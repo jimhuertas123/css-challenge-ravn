@@ -38,6 +38,13 @@
     color: #343951 !important;
 }
 
+@media (max-width: 1227px) {
+    .shared-profiles>* {
+        width: 20%;
+        aspect-ratio: 1/1;
+    }
+}
+
 @media (max-width: 628px) {
     .shared-profiles {
         justify-content: center;

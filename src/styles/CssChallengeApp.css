@@ -166,7 +166,7 @@ img {
   transition: background-color 300ms ease-in-out;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1227px) {
 
   .app-right-sidebar-container {
     animation: slideIn 300ms ease-in-out;
@@ -190,7 +190,7 @@ img {
   }
 
   .app-container {
-    padding-right: 10px;
+    padding-right: 4px;
     gap: 4px;
   }
 }

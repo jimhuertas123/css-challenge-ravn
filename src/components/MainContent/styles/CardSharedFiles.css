@@ -53,6 +53,17 @@
     font-size: 1rem;
 }
 
+@media (max-width: 1227px) {
+    .cards-shared-files-content h3 {
+        font-size: 1.2rem;
+    }
+
+    .cards-shared-files-content span {
+        font-size: 0.8rem;
+    }
+
+}
+
 @media (max-width: 628px) {
     .shared-profiles-files>* {
         height: 25%;

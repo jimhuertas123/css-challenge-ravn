@@ -289,7 +289,7 @@
   background-color: rgba(96, 104, 132, 0.6);
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1224px) {
   .popover-arrow {
     left: -20px;
   }

@@ -44,6 +44,32 @@
     scale: 1.05;
 }
 
+@media (max-width: 1227px) {
+    .table-content {
+        margin: auto;
+        padding: 1% 20px;
+        height: 48%;
+        margin-bottom: 3%;
+
+    }
+
+    .table-content h3 {
+        font-size: 1.1rem;
+    }
+
+    .table-content-title h3 {
+        font-size: 1.2rem;
+    }
+
+
+    .table-color-folder {
+        height: 70%;
+        aspect-ratio: 1/1;
+        border-radius: 5px;
+        margin-right: 10px;
+    }
+}
+
 @media (max-width: 628px) {
     .table-content-title h3 {
         font-size: 1rem;

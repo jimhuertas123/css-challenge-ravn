@@ -9,6 +9,7 @@ interface MainContentProps {
 }
 
 const MainContent = ({ }: MainContentProps) => {
+
 	return (
 		<div className="main-content-container">
 			<div className="search-section">
@@ -72,21 +73,21 @@ const MainContent = ({ }: MainContentProps) => {
 							key={2}
 							backgroundColor="#4AC29D"
 							title="True Photos"
-							members={5}
+							members={12}
 							date="Mar 8, 2020"
 						/>
 						<TableFilesContent
 							key={3}
 							backgroundColor="#FF6860"
 							title="Dashboard Structure"
-							members={5}
+							members={10}
 							date="Mar 9, 2020"
 						/>
 						<TableFilesContent
 							key={4}
 							backgroundColor="#FF9F00"
 							title="Character Illustration"
-							members={5}
+							members={3}
 							date="Mar 10, 2020"
 						/>
 					</div>
