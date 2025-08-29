@@ -33,6 +33,15 @@
     width: 25px;
     display: flex;
     justify-self: end;
+    border-radius: 50%;
+    padding: 5%;
+
+    transition: background-color 200ms ease-in-out;
+}
+
+.dots-hor-icon:hover {
+    background-color: var(--input-focus-bg-color);
+    scale: 1.05;
 }
 
 @media (max-width: 628px) {
@@ -40,5 +49,13 @@
         font-size: 1rem;
     }
 
+    .dots-hor-icon {
+        width: 21px;
+        height: 21px;
+    }
+
+    .table-content {
+        padding: 1% 14px 1% 14px;
+    }
 
 }

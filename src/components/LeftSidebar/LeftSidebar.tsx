@@ -1,16 +1,11 @@
 import { type JSX } from 'react';
-import '../../App.css';
-import './Sibebar.css';
+import './LeftSibebar.css';
 
 import { HomeIcon, FileIcon, MagnifyingGlassIcon, Share2Icon, TrashIcon, FilePlusIcon, CardStackPlusIcon, UploadIcon, PlusIcon } from '@radix-ui/react-icons'
 import * as Popover from '@radix-ui/react-popover';
 import { NavLink } from 'react-router-dom';
 
-interface SidebarProps {
-
-}
-
-const Sidebar: React.FC<SidebarProps> = () => {
+export const LeftSidebar = () => {
 
   const navigationItems: Record<string, { icon: JSX.Element, name: string, path: string }> = {
     home: { icon: <HomeIcon />, name: 'Home', path: '/' },
@@ -49,10 +44,9 @@ const Sidebar: React.FC<SidebarProps> = () => {
           </Popover.Trigger>
           <Popover.Content className="popover-content">
             <ul className="popover-list">
-              {/* ç,CardStackPlusIcon, UploadIcon, PlusIcon */}
               <li>
                 <a href="/upload-items">
-                  <span><UploadIcon /></span>
+                  <span><FilePlusIcon /></span>
                   <span>Upload Items</span>
                 </a>
               </li>
@@ -82,5 +76,3 @@ const Sidebar: React.FC<SidebarProps> = () => {
     </aside>
   );
 }
-
-export default Sidebar;

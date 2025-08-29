@@ -1,10 +1,10 @@
 import * as Switch from '@radix-ui/react-switch'
 import { useState } from 'react';
-import './App.css'
+import './styles/CssChallengeApp.css';
 import './styles/SwitchButton.css';
 
 import MainContent from './components/MainContent/MainContent';
-import Sidebar from './components/Sidebar/Sidebar';
+import { LeftSidebar } from './components/LeftSidebar/LeftSidebar';
 import RightSidebar from './components/RightSidebar/RightSidebar';
 
 export const CssChallengeApp = () => {
@@ -21,7 +21,7 @@ export const CssChallengeApp = () => {
             <Switch.Thumb className='switch-thumb' />
           </Switch.Root>
         </div>
-        <Sidebar />
+        <LeftSidebar />
       </div>
       <main className="app-main-container">
         <button

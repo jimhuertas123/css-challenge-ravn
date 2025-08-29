@@ -1,5 +1,5 @@
 import { CardsRecentUsed } from './CardsRecentUsed';
-import './MainContent.css';
+import './styles/MainContent.css';
 
 import { MagnifyingGlassIcon, ArrowLeftIcon, ArrowRightIcon } from '@radix-ui/react-icons';
 import TableFilesContent from './TableFilesContent';

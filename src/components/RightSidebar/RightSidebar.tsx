@@ -1,4 +1,4 @@
-import './RightSidebar.css';
+import './styles/RightSidebar.css';
 import Avatar from '../../assets/avatar.png';
 import { AvatarIcon, GearIcon } from '@radix-ui/react-icons'
 import { DonutChart } from './WheelPie';
