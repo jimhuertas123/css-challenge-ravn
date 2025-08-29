@@ -100,7 +100,7 @@ img {
 }
 
 .app-right-sidebar-container {
-  width: 282px;
+  width: 252px;
   flex-shrink: 0;
   background-color: var(--main-background-color);
   color: var(--text-color);

@@ -57,3 +57,42 @@
 .cards-storage-container> :not(:last-child) {
     border-bottom: 1px solid #E0E7F1;
 }
+
+
+@media (max-width: 1132px) {
+
+    .card-storage-info {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 13%;
+        height: 100%;
+    }
+
+    .info-storage-container {
+        width: 70%;
+        align-items: center;
+        display: flex;
+    }
+
+    .info-color-card {
+        height: 65%;
+    }
+
+    .info-storage-usage {
+        padding: 6px 5px;
+        font-size: 0.8rem;
+    }
+
+
+    .info-name-card label {
+        /* line-height: 1.5; */
+        font-size: 0.9rem;
+    }
+
+
+    /* abajo 720 files */
+    .info-name-card span {
+        color: var(--p-text-color);
+        font-size: 0.7rem;
+    }
+}

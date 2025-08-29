@@ -8,16 +8,18 @@ type CardStorageInfoProps = {
 	used?: string;
 }
 const CardStorageInfo = ({ color, label = 'Documents', files = '720 files', used = '200GB' }: CardStorageInfoProps) => {
-	return <div className="card-storage-info" >
-		<div className="info-storage-container" >
-			<div className="info-color-card" style={{ backgroundColor: color }} />
-			<div className="info-name-card">
-				<label>{label}</label>
-				<span>{files}</span>
+	return (
+		<div className="card-storage-info" >
+			<div className="info-storage-container" >
+				<div className="info-color-card" style={{ backgroundColor: color }} />
+				<div className="info-name-card">
+					<label>{label}</label>
+					<span>{files}</span>
+				</div>
 			</div>
+			<data className="info-storage-usage" value={used}>{used}</data>
 		</div>
-		<data className="info-storage-usage" value={used}>{used}</data>
-	</div>
+	);
 }
 
 const storageCards = [

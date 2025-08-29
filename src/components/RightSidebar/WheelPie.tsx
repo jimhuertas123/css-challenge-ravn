@@ -116,8 +116,9 @@ export const DonutChart = ({
                     y={center - 2}
                     textAnchor="middle"
                     dominantBaseline="middle"
-                    fontSize="100%"
-                    fontWeight="500"
+                    fontSize="95%"
+                    fontFamily='Roboto'
+                    fontWeight="400"
                     fill="#1F2937"
                 >
                     {usedPercentage}%
@@ -127,7 +128,7 @@ export const DonutChart = ({
                     y={center + 16}
                     textAnchor="middle"
                     dominantBaseline="middle"
-                    fontSize="70%"
+                    fontSize="50%"
                     fill="#6B7280"
                 >
                     Used
