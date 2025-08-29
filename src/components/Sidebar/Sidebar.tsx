@@ -2,7 +2,7 @@ import { type JSX } from 'react';
 import '../../App.css';
 import './Sibebar.css';
 
-import { HomeIcon, FileIcon, MagnifyingGlassIcon, Share2Icon, TrashIcon } from '@radix-ui/react-icons'
+import { HomeIcon, FileIcon, MagnifyingGlassIcon, Share2Icon, TrashIcon, FilePlusIcon, CardStackPlusIcon, UploadIcon, PlusIcon } from '@radix-ui/react-icons'
 import * as Popover from '@radix-ui/react-popover';
 import { NavLink } from 'react-router-dom';
 
@@ -49,27 +49,28 @@ const Sidebar: React.FC<SidebarProps> = () => {
           </Popover.Trigger>
           <Popover.Content className="popover-content">
             <ul className="popover-list">
+              {/* ç,CardStackPlusIcon, UploadIcon, PlusIcon */}
               <li>
                 <a href="/upload-items">
-                  <span><HomeIcon /></span>
+                  <span><UploadIcon /></span>
                   <span>Upload Items</span>
                 </a>
               </li>
               <li>
                 <a href="/upload-folders">
-                  <span><HomeIcon /></span>
+                  <span><CardStackPlusIcon /></span>
                   <span>Upload Folders</span>
                 </a>
               </li>
               <li>
                 <a href="/new-folder">
-                  <span><HomeIcon /></span>
+                  <span><UploadIcon /></span>
                   <span>New Folder</span>
                 </a>
               </li>
               <li>
                 <a href="/more">
-                  <span><HomeIcon /></span>
+                  <span><PlusIcon /></span>
                   <span>More</span>
                 </a>
               </li>
