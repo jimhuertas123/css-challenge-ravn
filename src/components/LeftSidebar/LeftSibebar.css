@@ -47,7 +47,7 @@
   background-color: #464C61;
 }
 
-/* icon under a */
+/* icon before a */
 .sidebar-nav a> :first-child {
   margin-right: 15px;
   width: 20px;
@@ -56,12 +56,11 @@
   transition: width 300ms ease-in-out;
 }
 
-/* text under a */
 .sidebar-nav a> :not(:first-child) {
   font-weight: 500;
   margin: 0;
   padding: 0;
-  font-size: 1rem;
+  font-size: 1.2rem;
   opacity: 1;
 
   transition: opacity 100ms ease-in-out 300ms;
@@ -109,6 +108,13 @@
   background-color: #fff;
 
   transition: background-color 200ms, height 200ms;
+}
+
+
+@media (min-width: 1227px) {
+  .sidebar-nav a> :not(:first-child) {
+    font-size: 1rsem;
+  }
 }
 
 @media (max-width: 728px) {
@@ -204,8 +210,6 @@
   font-size: 1rem;
   width: 100%;
 }
-
-@media (max-width: 1027px) {}
 
 @media (max-width: 728px) {
   .create-button-container button {

@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useRef } from 'react';
 import './styles/WheelPie.css'
 
 interface PieSegment {
@@ -25,24 +25,6 @@ export const DonutChart = ({
     gap = 17
 }: DonutChartProps) => {
     const containerRef = useRef<HTMLDivElement>(null);
-    const [containerSize, setContainerSize] = useState(200);
-
-    useEffect(() => {
-        const updateSize = () => {
-            if (containerRef.current) {
-                const { height, width } = containerRef.current.getBoundingClientRect();
-                const diameter = Math.min(Math.max(Math.min(height, width), 20), 100);
-                setContainerSize(diameter / 2 - strokeWidth);
-                console.log(height);
-            }
-        };
-
-        updateSize();
-        window.addEventListener('resize', updateSize);
-        return () => window.removeEventListener('resize', updateSize);
-    }, []);
-
-    radius = containerSize;
 
     const size = radius * 2 + strokeWidth;
     const center = size / 2;
@@ -58,7 +40,7 @@ export const DonutChart = ({
 
     return (
         <div className="donut-chart" ref={containerRef}>
-            <svg className='donut-chart-svg' viewBox={`0 0 ${size} ${size}`}>
+            <svg className='donut-chart-svg' viewBox={`-5 -5 ${size + 10} ${size + 10}`}>
                 <circle
                     className='donut-chart-background'
                     cx={center}

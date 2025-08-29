@@ -29,7 +29,7 @@ const RightSidebar = () => {
             { color: '#4AC29D', value: 13, label: 'Photos' },
             { color: '#FF9F00', value: 43, label: 'Documents' },
           ]}
-          radius={80}
+          radius={50}
           strokeWidth={5}
         />
         <span>420.2 GB of 500 GB used</span>

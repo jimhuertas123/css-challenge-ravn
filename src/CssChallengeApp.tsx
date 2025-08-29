@@ -9,9 +9,15 @@ import MainContent from './components/MainContent/MainContent';
 import { LeftSidebar } from './components/LeftSidebar/LeftSidebar';
 import RightSidebar from './components/RightSidebar/RightSidebar';
 import { useMediaQuery } from './hooks/useMediaQuery';
+import { useEffect } from 'react';
 
 export const CssChallengeApp = () => {
-  const [dataTheme, setDataTheme] = useState('light');
+  const [dataTheme, setDataTheme] = useState(() => localStorage.getItem('dataTheme') || 'light');
+
+  useEffect(() => {
+    localStorage.setItem('dataTheme', dataTheme);
+  }, [dataTheme]);
+
   const [rightSidebarOpen, setRightSidebarOpen] = useState(false);
   const isMobile = useMediaQuery('(max-width: 1024px)');
 
